@@ -12,24 +12,63 @@
   </head>
   <body>
     <!--  header-->
-    <div class="jumbotron jumbotron-fluid text-white text-center align-middle" style="background: rgb(240, 238, 238);">
-        <div class="container-fluid">
-            <div class="d-inline-flex flex-row col ph-2 py-2">
-                <i class="fa-brands fa-instagram"></i><h4 class="text-secondary">Instagram</h4>
-                <button type="button" class="btn btn-success">Success</button>
-                <button class="btn btn-secondary dropdown-toggle align-self-end" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-gear"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+    <div class="jumbotron" style="background: rgb(240, 238, 238);">
+        <div class="container">
+            <div class="d-flex justify-content-between ph-2 py-2">
+              <div class="d-flex align-items-center">
+                <i class="fa-brands fa-instagram"></i><h4 class="text-secondary justify-content-start">Instagram</h4>
+                </div>  
+                <div>
+                <!-- new code-->
+                <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create New Post
+              </button>
+
+              <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <!-- -->
+
+                  <button class="btn btn-secondary dropdown-toggle align-self-end" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-gear"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
             </div>
         </div>
     </div>
     <!-- NavBar-->
-    <div class="nav">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">contentONE</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">contentTWO</div>
 
     </div>
     <!-- Body-->
